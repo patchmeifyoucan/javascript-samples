@@ -1,9 +1,12 @@
 var fs = require('fs');
+
+// s = "sync"
 var fss = {};
 fss.readFile = function (file, cb) {
   return cb(null, 'this would be some content');
 };
 
+// s = "async"
 var fsa = {};
 fsa.readFile = function (file, cb) {
   setTimeout(function () {

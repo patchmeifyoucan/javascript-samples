@@ -5,6 +5,7 @@ function z() {
 
 function y() {
   a = 5;
+  b = 3;
   z();
 }
 

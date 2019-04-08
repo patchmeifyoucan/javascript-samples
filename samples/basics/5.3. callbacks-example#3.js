@@ -21,7 +21,7 @@ util.readWithDefault('doesnotexist', function (err, res) {
     console.log(res.length);
 });
 
-
+// throws error AND reads file? -> fix it
 
 
 

@@ -1,7 +1,5 @@
-// Switch to ES6 block scope first
-// x
 {
-  function x() {
+  function a() {
     var result = -1;
 
     for (var result = 0; result < 5; ++result) {
@@ -12,30 +10,76 @@
     return result;
   }
 
-  var result = x();
-  console.log('x:', result);
+  var result = a();
+  console.log('a:', result);
 }
 
-// y
 {
-  function y() {
+  function b() {
     var result = -1;
 
     for (var result = 0; result < 5; ++result) {
       var result = 'string';
-      console.log(result);
+      console.log('loop', result);
     }
 
     return result;
   }
 
-  var result = y();
+  var result = b();
   console.log('y:', result);
 }
 
-// z
 {
-  function z() {
+  function c() {
+    var result = -1;
+
+    for (var result = 0; result < 5; ++result) {
+      var result = '';
+      console.log('loop', result);
+    }
+
+    return result;
+  }
+
+  var result = c();
+  console.log('y:', result);
+}
+
+{
+  function d() {
+    var result = '';
+
+    console.log('loop-out', result);
+    for (result; result < 5; ++result) {
+      console.log('loop-in', result);
+    }
+
+    return result;
+  }
+
+  var result = d();
+  console.log('y:', result);
+}
+
+{
+  function d() {
+    var result = 'some-string';
+
+    console.log('loop-out', result);
+    for (result; result < 5; ++result) {
+      console.log('loop-in', result);
+    }
+
+    return result;
+  }
+
+  var result = d();
+  console.log('y:', result);
+}
+
+{
+  function e() {
     for (var i = 0; i < 5; ++i) {
       console.log(i);
     }
@@ -43,6 +87,6 @@
     return i;
   }
 
-  var result = z();
+  var result = e();
   console.log('z:', result);
 }

@@ -7,9 +7,10 @@ function doSomethingAsync(value, cb) {
   return id;
 }
 
-
+// async method can return sync values, too
 var id = doSomethingAsync('myvalue', function (err, res) {
-  console.log('callback result',id, res);
+  console.log('callback result', id, res);
 });
 
-console.log('after call',id);
+console.log('after call', id);
+

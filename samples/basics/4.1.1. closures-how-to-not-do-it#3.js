@@ -1,5 +1,5 @@
 // It is not the reference to the function.
-// We know about scopes, so lets reassign the variable
+// We know about scopes, so let's reassign the variable
 
 var results = [];
 

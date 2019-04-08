@@ -5,7 +5,7 @@ var people = [{age: '42'}, {age: '25'}, {age: '84'}, {age: '24'}, {age: '31'}, {
 var ages = people.map(function (p, i, a) {
   p.age = Number(p.age);
   return p;
-});
+}); // 4 LOC, 83 chars
 
 console.log(ages);
 

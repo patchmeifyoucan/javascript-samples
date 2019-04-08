@@ -48,12 +48,4 @@ results.forEach(function (f) {
 
 
 
-
-
-
-
-
-
-
-
 // Explanation: same as before

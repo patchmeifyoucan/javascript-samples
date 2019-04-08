@@ -21,6 +21,9 @@ ctx.peval(`'\0'.length`);
 ctx.peval(`'\0' === ''`);
 ctx.peval(`'\0' === ' '`);
 
-
-
-
+section('??');
+var empty = '';
+ctx.print(empty++);
+ctx.print(empty++);
+ctx.print(lorem++);
+ctx.print(lorem++);

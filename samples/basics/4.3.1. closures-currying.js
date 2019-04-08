@@ -1,3 +1,6 @@
+var {Context} = require('../util/context');
+var ctx = new Context({}, {padding: 25});
+
 // Currying - https://developer.mozilla.org/de/docs/Web/JavaScript/Closures
 function add(x, y) {
   if (!y)
@@ -9,8 +12,7 @@ function add(x, y) {
 }
 
 var isThree = add(3, 0);
-console.log(typeof isThree);
-// var isEight = add(5, 3);
-//
-// console.log(add3(5));
-// console.log(isEight);
+var isFour = add(3, 1);
+ctx.add({isThree, isFour});
+ctx.peval('typeof isThree');
+ctx.peval('typeof isFour');
