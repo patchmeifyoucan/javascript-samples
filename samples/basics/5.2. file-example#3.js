@@ -1,6 +1,6 @@
 // In which order is i logged?
 
-var fs = require('./utils').fsa;
+var fs = require('../util/fake-fs').fsa;
 
 function read(i) {
   fs.readFile('content', function (err, res) {

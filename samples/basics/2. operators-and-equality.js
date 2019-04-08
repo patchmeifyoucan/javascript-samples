@@ -1,67 +1,45 @@
-'use strict';
+var {Context} = require('../util/context');
+var {section, line} = require('../util/misc');
+var ctx = new Context({}, {padding: 25});
 
-function print(obj) {
-  var pad = 15;
-  for (var k in obj) {
+function bool(value) {
+  ctx.print(`Evaluating boolean values for: '${value}'`);
 
-    var value = obj[k];
-    console.log('-'.repeat(pad * 2));
-    console.log('key: '.padStart(pad) + k);
-    console.log('value: '.padStart(pad) + value);
-    console.log('type: '.padStart(pad) + typeof value);
+  ctx.add({value: value});
+  ctx.peval(`typeof value`);
+  ctx.peval(`value === false`);
+  ctx.peval(`value == false`);
+  ctx.peval(`value === true`);
+  ctx.peval(`value == true`);
+  ctx.peval(`!value`);
+  ctx.peval(`!!value`);
+  ctx.peval(`Boolean(value)`);
 
-    console.log('=== false: '.padStart(pad) + (false === value));
-    console.log(' == false: '.padStart(pad) + (false == value));
-
-    console.log('=== true: '.padStart(pad) + (true === value));
-    console.log(' == true: '.padStart(pad) + (true == value));
-
-    console.log('!value: '.padStart(pad) + (!value));
-    console.log('!!value: '.padStart(pad) + (!!value));
-
-    console.log('converted: '.padStart(pad) + (Boolean(value)));
-
-    if (value)
-      console.log('evaluated to true');
-    else
-      console.log('evaluated to false');
-  }
+  ctx.clear();
+  line();
 }
 
-var falsy = {
-  null: null,
-  undefined: undefined,
-  empty: '',
-  zero: 0
-};
+section('Falsy values');
+bool(null);
+bool(undefined);
+bool('');
+bool(0);
 
-var truthy = {
-  object: {},
-  array: {},
-  one: 1,
-  string: 'hello',
-  function: function () {
-    var x = 'hello';
+section('Truthy values');
+bool({});
+bool([]);
+bool(1);
+bool('notanemptystring');
+bool(() => {
+  return `I'm a function.`
+});
 
-  }
-};
+section('Sloppy comparison');
+ctx.peval(`'1' == 1`);
+ctx.peval(`'1' == true`);
+ctx.peval(`1 == true`);
 
-// print(falsy);
-// print(truthy);
-
-var comparisonsSloppy = {
-  stringVsNumber: '1' == 1,
-  stringVsBoolean: '1' == true,
-  numberVsBoolean: 1 == true
-};
-
-var comparisonsStrict = {
-  stringVsNumber: '1' === 1,
-  stringVsBoolean: '1' === true,
-  numberVsBoolean: 1 === true
-};
-
-// console.log();
-// console.log(JSON.stringify(comparisonsSloppy, null, 4));
-console.log(JSON.stringify(comparisonsStrict, null, 4));
-
+section('Strict comparison');
+ctx.peval(`'1' === 1`);
+ctx.peval(`'1' === true`);
+ctx.peval(`1 === true`);

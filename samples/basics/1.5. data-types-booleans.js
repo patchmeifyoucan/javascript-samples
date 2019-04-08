@@ -1,23 +1,25 @@
-var {printObject} = require('./utils');
+var {Context} = require('../util/context');
+var ctx = new Context({}, {padding: 25});
 
-var bools = {
-  // primitiveTrue: true,
-  // primitiveFalse: false,
+var statements = [
+  'true',
+  'false',
 
-  // fromBool: Boolean(true),
-  // fromTrueString: Boolean('true'),
-  // fromFalseString: Boolean('false'),
+  'Boolean(true)',
+  `Boolean('true')`,
+  `Boolean('false')`,
+  `Boolean('')`,
+  `Boolean(null)`,
+  `Boolean()`,
+  `Boolean(0)`,
+  `Boolean(1110)`,
 
-  // fromEmptyString: Boolean(''),
-  // fromNull: Boolean(null),
-  // fromUndefined: Boolean(),
-  // fromZero: Boolean(0),
-  // fromNonZero: Boolean(1110),
-  //
-  fromTrueObj: new Boolean(true),
-  fromFalseObj: new Boolean(false),
-  fromZeroObj: new Boolean(0),
-  fromEmptyStringObj: new Boolean('')
-};
+  `new Boolean(true)`,
+  `new Boolean(false)`,
+  `new Boolean(0)`,
+  `new Boolean('')`
+];
 
-printObject(bools);
+ctx.info();
+for (const s of statements)
+  ctx.info(s);

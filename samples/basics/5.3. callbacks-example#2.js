@@ -1,6 +1,6 @@
 // What is logged?
 
-var util = require('./utils').util;
+var util = require('../util/fake-fs').util;
 
 util.readWithDefault('doesnotexist', function (err, res) {
   if (err)

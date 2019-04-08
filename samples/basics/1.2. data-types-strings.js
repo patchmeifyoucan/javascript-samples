@@ -1,13 +1,26 @@
-// var lorem = 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.';
-// console.log('length', lorem.length);
-// console.log('indexOf', lorem.indexOf('ipsum'));
-// console.log('lastIndexOf', lorem.lastIndexOf('ipsum'));
-//
-// for (var i = 0; i < 10; ++i)
-//   console.log(i, lorem[i]);
-//
-// console.log(lorem.replace('sed', 'SED'));
-// console.log(lorem.replace(/sed/gi, 'SED'));
-console.log(`\0`.length);
+var {Context} = require('../util/context');
+var {section} = require('../util/misc');
+
+var lorem = 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.';
+var ctx = new Context({lorem}, {padding: 50});
+
+section('Basic string operations');
+ctx.peval('lorem.length');
+ctx.peval(`lorem.indexOf('a')`);
+ctx.peval(`lorem.lastIndexOf('a')`);
+
+for (var i = 0; i < 10; ++i)
+  console.log(i, lorem[i]);
+
+ctx.peval(`lorem.replace('sed', 'SED')`); // replaces only first occurrence
+ctx.peval(`lorem.replace(/sed/gi, 'SED')`); // replaces all occurrences
+
+section('Basic string operations'); // watch the console output
+ctx.peval(`''.length`);
+ctx.peval(`'\0'.length`);
+ctx.peval(`'\0' === ''`);
+ctx.peval(`'\0' === ' '`);
+
+
 
 
