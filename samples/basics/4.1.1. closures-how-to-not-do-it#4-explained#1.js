@@ -1,24 +1,23 @@
 // scope this code first to be able to the scope chain
 
-(function outerScope() {
-  var results = [];
+(function outerScope () {
+  var results = []
 
-  function x() {
+  function x () {
     for (var i = 0; i < 5; ++i) {
-      results.push(function innerScope() {
-        var y = i;
-        console.log(y);
-      });
+      results.push(function innerScope () {
+        var y = i
+        console.log(y)
+      })
     }
   }
 
-  x();
+  x()
 
-  results.forEach(function loop(f) {
-    f();
-  });
-})();
-
+  results.forEach(function loop (f) {
+    f()
+  })
+})()
 
 // Explanation
 // [[property]] -> internal property

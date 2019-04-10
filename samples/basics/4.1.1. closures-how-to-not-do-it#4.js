@@ -1,37 +1,22 @@
 // Of course, y is in scope of x...
 // Move it into the declared function
 
-var results = [];
+var results = []
 
-function x() {
+function x () {
   for (var i = 0; i < 5; ++i) {
-    results.push(function scope() {
-      var y = i;
-      console.log(y);
-    });
+    results.push(function scope () {
+      var y = i
+      console.log(y)
+    })
   }
 }
 
-x();
+x()
 
 results.forEach(function (f) {
-  f();
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  f()
+})
 
 // Explanation
 // i is assigned to y, therefore, it does not matter which value y has, it will always be assigned

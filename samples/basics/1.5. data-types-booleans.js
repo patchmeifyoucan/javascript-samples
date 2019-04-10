@@ -1,5 +1,5 @@
-var {Context} = require('../util/context');
-var ctx = new Context({}, {padding: 25});
+var { Context } = require('../util/context')
+var ctx = new Context({}, { padding: 25 })
 
 var statements = [
   'true',
@@ -18,8 +18,9 @@ var statements = [
   `new Boolean(false)`,
   `new Boolean(0)`,
   `new Boolean('')`
-];
+]
 
-ctx.info();
-for (const s of statements)
-  ctx.info(s);
+ctx.info()
+for (const s of statements) {
+  ctx.info(s)
+}

@@ -1,44 +1,24 @@
-var results = [];
+var results = []
 
-function create(obj) {
-  return function createInner() {
-    console.log(obj.i);
+function create (obj) {
+  return function createInner () {
+    console.log(obj.i)
   }
 }
 
-function x() {
+function x () {
   for (var i = 0; i < 5; ++i) {
-    var obj = {};
-    obj.i = i;
-    results.push(create(obj));
+    var obj = {}
+    obj.i = i
+    results.push(create(obj))
   }
 }
 
-x();
+x()
 
-results.forEach(function loop(f) {
-  f();
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+results.forEach(function loop (f) {
+  f()
+})
 
 // Explanation
 // In the last example, this is the code that is actually executed

@@ -1,51 +1,16 @@
 // In which order is i logged?
 
-var fs = require('../util/fake-fs').fsa;
+var fs = require('../util/fake-fs').fsa
 
-function read(i) {
+function read (i) {
   fs.readFile('content', function (err, res) {
     console.log('done ' + i)
-  });
+  })
 }
 
 for (var i = 0; i < 50; ++i) {
-  read(i);
+  read(i)
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // This custom method uses a random delay, scheduled by the internal event loop
 // Therefore, this code runs asynchronously since it is scheduled by the runtime

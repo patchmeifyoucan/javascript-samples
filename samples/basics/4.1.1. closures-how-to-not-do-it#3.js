@@ -1,74 +1,27 @@
 // It is not the reference to the function.
 // We know about scopes, so let's reassign the variable
 
-var results = [];
+var results = []
 
-function x() {
-  var i;
-  var y;
+function x () {
+  var i
+  var y
 
   for (i = 0; i < 5; ++i) {
-    y = i;
+    y = i
     results.push(function () {
-      console.log(y);
-    });
+      console.log(y)
+    })
   }
 }
 
-x();
+x()
 
 results.forEach(function (f) {
-  f();
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  f()
+})
 
 // What????????????????????
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // Explanation:
 

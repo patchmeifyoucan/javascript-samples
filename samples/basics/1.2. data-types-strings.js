@@ -1,29 +1,30 @@
-var {Context} = require('../util/context');
-var {section} = require('../util/misc');
+var { Context } = require('../util/context')
+var { section } = require('../util/misc')
 
-var lorem = 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.';
-var ctx = new Context({lorem}, {padding: 50});
+var lorem = 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.'
+var ctx = new Context({ lorem }, { padding: 50 })
 
-section('Basic string operations');
-ctx.peval('lorem.length');
-ctx.peval(`lorem.indexOf('a')`);
-ctx.peval(`lorem.lastIndexOf('a')`);
+section('Basic string operations')
+ctx.peval('lorem.length')
+ctx.peval(`lorem.indexOf('a')`)
+ctx.peval(`lorem.lastIndexOf('a')`)
 
-for (var i = 0; i < 10; ++i)
-  console.log(i, lorem[i]);
+for (var i = 0; i < 10; ++i) {
+  console.log(i, lorem[i])
+}
 
-ctx.peval(`lorem.replace('sed', 'SED')`); // replaces only first occurrence
-ctx.peval(`lorem.replace(/sed/gi, 'SED')`); // replaces all occurrences
+ctx.peval(`lorem.replace('sed', 'SED')`) // replaces only first occurrence
+ctx.peval(`lorem.replace(/sed/gi, 'SED')`) // replaces all occurrences
 
-section('Basic string operations'); // watch the console output
-ctx.peval(`''.length`);
-ctx.peval(`'\0'.length`);
-ctx.peval(`'\0' === ''`);
-ctx.peval(`'\0' === ' '`);
+section('Basic string operations') // watch the console output
+ctx.peval(`''.length`)
+ctx.peval(`'\0'.length`)
+ctx.peval(`'\0' === ''`)
+ctx.peval(`'\0' === ' '`)
 
-section('??');
-var empty = '';
-ctx.print(empty++);
-ctx.print(empty++);
-ctx.print(lorem++);
-ctx.print(lorem++);
+section('??')
+var empty = ''
+ctx.print(empty++)
+ctx.print(empty++)
+ctx.print(lorem++)
+ctx.print(lorem++)

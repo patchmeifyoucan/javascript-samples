@@ -1,44 +1,24 @@
-var results = [];
+var results = []
 
-function create(i) {
-  return function createInner() {
-    console.log(i);
+function create (i) {
+  return function createInner () {
+    console.log(i)
   }
 }
 
-function x() {
-  var obj = {};
+function x () {
+  var obj = {}
   for (var i = 0; i < 5; ++i) {
-    obj.i = i;
-    results.push(create(obj.i));
+    obj.i = i
+    results.push(create(obj.i))
   }
 }
 
-x();
+x()
 
-results.forEach(function loop(f) {
-  f();
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+results.forEach(function loop (f) {
+  f()
+})
 
 // Explanation
 // a number is passed as copied value, therefore, i is "enclosed" as value and consecutively not changed by

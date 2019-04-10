@@ -1,55 +1,22 @@
 // Trivial thought
 
-var results = [];
+var results = []
 
-function x() {
-  var i;
+function x () {
+  var i
   for (i = 0; i < 5; ++i) {
     var fn = function () {
-      console.log(i);
-    };
-    results.push(fn);
+      console.log(i)
+    }
+    results.push(fn)
   }
 }
 
-x();
+x()
 
 results.forEach(function (f) {
-  f();
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  f()
+})
 
 // Explanation:
 // hoisting of i + function scope => it is the same variable

@@ -1,40 +1,26 @@
 // Let's pass the whole object
 
-var results = [];
+var results = []
 
-function create(obj) {
-  return function createInner() {
-    console.log(obj.i);
+function create (obj) {
+  return function createInner () {
+    console.log(obj.i)
   }
 }
 
-function x() {
-  var obj = {};
+function x () {
+  var obj = {}
   for (var i = 0; i < 5; ++i) {
-    obj.i = i;
-    results.push(create(obj));
+    obj.i = i
+    results.push(create(obj))
   }
 }
 
-x();
+x()
 
-results.forEach(function loop(f) {
-  f();
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+results.forEach(function loop (f) {
+  f()
+})
 
 // Explanation
 

@@ -1,51 +1,20 @@
 // Trivial thought does not work.
 // Instead, avoid the reference
 
-var results = [];
+var results = []
 
-function x() {
+function x () {
   for (var i = 0; i < 5; ++i) {
     results.push(function () {
-      console.log(i);
-    });
+      console.log(i)
+    })
   }
 }
 
-x();
+x()
 
 results.forEach(function (f) {
-  f();
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  f()
+})
 
 // Explanation: same as before

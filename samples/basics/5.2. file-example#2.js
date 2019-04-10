@@ -1,42 +1,15 @@
 // In which order is i logged?
-var fs = require('../util/fake-fs').fss;
+var fs = require('../util/fake-fs').fss
 
-function read(i) {
+function read (i) {
   fs.readFile('content', function (err, res) {
     console.log('done ' + i)
-  });
+  })
 }
 
 for (var i = 0; i < 50; ++i) {
-  read(i);
+  read(i)
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // Explanation
 // The used method is a custom method that only looks like the original

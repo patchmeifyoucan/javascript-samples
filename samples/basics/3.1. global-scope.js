@@ -1,32 +1,31 @@
-function z() {
-  console.log('z: a =', a);
-  console.log('z: b =', b);
+function z () {
+  console.log('z: a =', a)
+  console.log('z: b =', b)
 }
 
-function y() {
-  a = 5;
-  b = 3;
-  z();
+function y () {
+  a = 5
+  b = 3
+  z()
 }
 
-function x() {
-  var a = 3;
-  var b;
-  var d;
+function x () {
+  var a = 3
+  var b
+  var d
 
-  a = 3;
+  a = 3
 
-  aaa = 5;
-  b = 5;
-  y();
+  aaa = 5
+  b = 5
+  y()
 
-  d = a;
+  d = a
 
-  console.log('x: b =', b);
+  console.log('x: b =', b)
 }
 
-x();
-
+x()
 
 // ==== "real world code"
 
