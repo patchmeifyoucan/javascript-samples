@@ -21,7 +21,8 @@ even in production code.
 - create a *.js file and import the simplified HTTP client based on [Axios](https://github.com/axios/axios),
 it is already set up with the localhost address so you only have to care about addressing the API
 - go to Task 1 and try to solve it :)
-- possible solutions are provided in test files, try to avoid cheating as much as possible :) 
+- possible solutions are provided in test files, try to avoid cheating as much as possible :)
+- the server saves your state to a file under [util](../util), just delete it if you want to start from scratch 
 
 <details><summary>How do I use the HTTP client provided?</summary>
 
@@ -128,12 +129,9 @@ a "company" parameter for analyzing the dataset in such a way? Why, why not?
 </details>
 
 ## Task 5
-1. Output a list of entries.  
-    1. Each entry consists of the names of two people knowing each other.
-    2. Using Array notation, entries `[a, b]` and `[b, a]` are considered to be duplicates. We don't want them. Think of a
-    undirected graph but don't implement one (or do if these tasks are way tooo boring :neckbeard:)!
-    3. How many people know each other? 
-    4. What does your data structure look like?
+Use the http://localhost:3000/api/doc/#/default/post_api_users__userId__meet API to let people meet each other. Try to produce
+every documented client error.  
+
     
 <details><summary>Hints Task 5</summary>
 <p></p>

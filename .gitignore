@@ -1,6 +1,9 @@
 # IDEA settings
 .idea
 
+# tmp "database"
+basics/util/runtime.json
+
 # Logs
 logs
 *.log

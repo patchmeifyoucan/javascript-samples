@@ -2,14 +2,16 @@
   "name": "javascript-exercises-basics",
   "version": "1.0.0",
   "scripts": {
-    "start": "node app/app.js",
-    "test": "node test/test.js"
+    "start": "node excercises/app/app.js",
+    "test": "set NODE_ENV=test && node excercises/test/test.js"
   },
   "dependencies": {
     "axios": "^0.18.0",
     "express": "^4.16.4",
     "log4js": "^4.1.0",
-    "swagger-ui-express": "^4.0.2"
+    "swagger-ui-express": "^4.0.2",
+    "fs-extra": "latest",
+    "body-parser": "latest"
   },
   "devDependencies": {
     "eslint": "^5.16.0",

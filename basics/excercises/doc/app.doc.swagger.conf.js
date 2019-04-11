@@ -2,7 +2,7 @@ const paths = require('./app.doc.paths')
 const definitions = require('./app.doc.definitions')
 
 const conf = {
-  openapi: '3.0.0', // Specification (optional, defaults to swagger: '2.0')
+  openapi: '3.0.0',
   definition: {
     info: {
       title: 'Fake person database API',

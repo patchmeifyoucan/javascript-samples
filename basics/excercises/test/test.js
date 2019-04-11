@@ -1,9 +1,32 @@
 // This file runs just some basic app validations. No test runnter etc. needed
 (async () => {
-  'use strict'
   const assert = require('assert').strict
   const { http, getLogger } = require('../../util/util')
   const logger = getLogger(__filename)
+
+  const testApi = async () => {
+    logger.info('Testing API.')
+    const { data: users } = await http.get('/api/users')
+    const [u1, u2, u3] = users
+
+    const { status: u1status, data: u1Res } = await http.get(`/api/users/${u1.id}`)
+    assert.strictEqual(u1status, 200, `Expected status code 200, got ${u1status}.`)
+    assert.strictEqual(u1.id, u1Res.id, `Expected user IDs '${u1.id}' and '${u1Res.id}' to be the same.`)
+
+    const { status: notFoundStatus } = await http.get(`/api/users/noid`)
+    assert.strictEqual(notFoundStatus, 404, `Expected status code 404, got ${notFoundStatus}.`)
+
+    const { status: notFoundStatusMeet } = await http.post(`/api/users/noid/meet`, {})
+    assert.strictEqual(notFoundStatusMeet, 404, `Expected status code 404, got ${notFoundStatusMeet}.`)
+
+    const body = [{ id: u2.id }, { id: u3.id }]
+    const { status: notFoundStatusMeetValid } = await http.post(`/api/users/${u1.id}/meet`, body)
+    assert.strictEqual(notFoundStatusMeetValid, 200, `Expected status code 200, got ${notFoundStatusMeetValid}.`)
+
+    const { status: notFoundStatusMeetInvalid } = await http.post(`/api/users/${u1.id}/meet`, body)
+    assert.strictEqual(notFoundStatusMeetInvalid, 409, `Expected status code 409, got ${notFoundStatusMeetInvalid}.`)
+    logger.info('Testing valid.')
+  }
 
   const { status, /** @type User[] */ data: users } = await http.get('/api/users')
 
@@ -128,9 +151,9 @@
     logger.info('Task 4 valid.')
   }
 
+  await testApi()
   await task1test()
   await task2test()
   await task3test()
   await task4test()
-  // TODO test task 5
 })()

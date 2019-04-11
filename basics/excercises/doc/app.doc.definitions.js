@@ -46,6 +46,12 @@ const spec = {
       }
     }
   },
+  id: {
+    type: 'object',
+    properties: {
+      id: 'string'
+    }
+  },
   errors: {
     clientError: {
       type: 'object',
