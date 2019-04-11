@@ -89,7 +89,7 @@ made you forget his name the day after, though. Maybe he did register too?
 
 <details><summary>Hints Task 3</summary>
 <p>
-The balance is of type `string` in the dataset! Use your knowledge about type conversions to deal with this.
+The balance is a string in the dataset! Use your knowledge about type conversions to deal with this.
  
 ```javascript
 String.prototype.split()      // just as in any other language
@@ -98,6 +98,7 @@ Array.prototype.map()         // transforms a sequence into another sequence
 Array.prototype.sort()        // consider using .sort() for sorting objects
 Array.prototype.slice()       // get a portion of an array
 ```
+
 </p>
 </details>
 
