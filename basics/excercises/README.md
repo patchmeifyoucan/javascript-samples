@@ -19,14 +19,13 @@ even in production code.
 - run `npm start` to start the API server
 - go to http://localhost:3000/api/doc and check out the documentation
 - create a *.js file and import the simplified HTTP client based on [Axios](https://github.com/axios/axios),
-it is already set up with the localhost address so you only have to care about addressing the API,
-your response will look like [this](https://github.com/axios/axios#response-schema)
+it is already set up with the localhost address so you only have to care about addressing the API
 - go to Task 1 and try to solve it :)
 - possible solutions are provided in test files, try to avoid cheating as much as possible :) 
 
 <details><summary>How do I use the HTTP client provided?</summary>
-<p>
 
+<span>Your response object will look like <a href="https://github.com/axios/axios#response-schema">this</a>.</span>
 ```javascript
 const { http } = require('../util/util') // ensure that your relative path is correct
 
@@ -39,10 +38,11 @@ http.get('/api/users')
       // Handle the error
     })
 
-const response = await http.get('/api/users') // if you want to use async-await ensure that you are in an async function    
+// if you want to use async-await ensure that you are in an async function, a rejection here will crash your code
+// while the above call does not, why?
+const response = await http.get('/api/users')     
 ```
 
-</p>
 </details>
 
 ## Task 1
@@ -50,13 +50,11 @@ const response = await http.get('/api/users') // if you want to use async-await 
 2. How many active users are in the database?
 
 <details><summary>Hints Task 1</summary>
-<p>
 
 ```javascript
 Array.prototype.filter()      // can be used to find elements matching a condition
 ```
 
-</p>
 </details>
 
 ## Task 2
@@ -65,18 +63,15 @@ Array.prototype.filter()      // can be used to find elements matching a conditi
 3. Who works for the company "GEOFARM"? Use their email address as output.
 
 <details><summary>Hints Task 2</summary>
-<p>
 
 ```javascript
-Array.prototype.sort()        // consider using .sort() for sorting numbers
 Date.parse()                  // returns a number
 Math.floor() || Math.ceil()   // use it remove fractional digits
-Date.prototype.toISOString()  // converts a numeric date to a date string
 Math.min()                    // can be used to find the smallest value in a collection, 
                               // it does not accept an array, though! lookup what the ES6 spread operator does
+Array.prototype.sort()        // consider using .sort() for sorting numbers
+Date.prototype.toISOString()  // converts a numeric date to a date string
 ```
-
-</p>
 </details>
 
 ## Task 3
@@ -87,19 +82,16 @@ Math.min()                    // can be used to find the smallest value in a col
 made you forget his name the day after, though. Maybe he did register too?
 
 <details><summary>Hints Task 3</summary>
-<p>
-
-The balance is of type `string` in the dataset! Use your knowledge about type conversions to deal with this. 
+<span>The balance is of type `string` in the dataset! Use your knowledge about type conversions to deal with this.</span> 
 
 ```javascript
+String.prototype.split()      // just as in any other language
 Array.prototype.pop()         // removes and returns the last element of an array 
 Array.prototype.map()         // transforms a sequence into another sequence
 Array.prototype.sort()        // consider using .sort() for sorting objects
-String.prototype.split()      // just as in any other language
-String.prototype.slice()      // get a portion of an array
+Array.prototype.slice()       // get a portion of an array
 ```
 
-</p>
 </details>
 
 ## Task 4
@@ -112,15 +104,17 @@ if you want to write some backend code.
 4. What needs to be changed if someone wants to have information not related to a particular company? Do you think it is a good idea to keep
 a "company" parameter for analyzing the dataset in such a way? Why, why not? 
 
-
 <details><summary>Hints Task 4</summary>
-<p>
-Write a function that takes two parameters. The first one specifies the company which the data should be about. The second
-could be an array of properties to extract. Try to chain .filter, .map and .reduce methods.
-
-Or use any other implementation.
-
-</p>
+<ol>
+    <li>If you have the IDs, try using the `Promise.all()` operation to query all users asynchronously. What are the limitations with this?</li>
+    <li>Once you get the response, you might see the solution by looking at the data set.</li>
+    <li>Try using .map, .filter and .reduce. No more hints. :)</li>
+    <li>
+        It is a good programming pattern to use functions that do exactly one thing at a time. A function that statically 
+        filters by the "company" property and then extracts some more properties from the filtered list is not very reusable. 
+        Try to decouple the filtering from the property data extraction.
+    </li>
+</ol>
 </details>
 
 ## Task 5
@@ -132,7 +126,5 @@ Or use any other implementation.
     4. What does your data structure look like?
     
 <details><summary>Hints Task 5</summary>
-<p>
 
-</p>
 </details>    
