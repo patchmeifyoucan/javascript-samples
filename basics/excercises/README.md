@@ -19,7 +19,11 @@ even in production code.
 - run `npm start` to start the API server
 - go to http://localhost:3000/api/doc and check out the documentation
 - create a *.js file and import the simplified HTTP client based on [Axios](https://github.com/axios/axios),
-it is already set up with the localhost address so you only have to care about addressing the API
+it is already set up with the localhost address so you only have to care about addressing the API,
+your response will look like [this](https://github.com/axios/axios#response-schema)
+- go to Task 1 and try to solve it :)
+- possible solutions are provided in test files, try to avoid cheating as much as possible :) 
+
 <details><summary>How do I use the HTTP client provided?</summary>
 <p>
 
@@ -27,7 +31,6 @@ it is already set up with the localhost address so you only have to care about a
 const { http } = require('../util/util') // ensure that your relative path is correct
 
 // note that this execution does not wait for your HTTP call to finish
-// your response will look like [this](https://github.com/axios/axios#response-schema)
 http.get('/api/users')
     .then(response => {
       // Do something with the response  
@@ -41,8 +44,6 @@ const response = await http.get('/api/users') // if you want to use async-await 
 
 </p>
 </details>
-- go to Task 1 and try to solve it :)
-- possible solutions are provided in test files, try to avoid cheating as much as possible :) 
 
 ## Task 1
 1. How many users are in the database?
