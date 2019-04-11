@@ -1,5 +1,5 @@
 var { Context } = require('../../util/context')
-var { section, line } = require('../../util/misc')
+var { section, line } = require('../../util/util')
 var ctx = new Context({}, { padding: 25 })
 
 function bool (value) {

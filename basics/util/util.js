@@ -13,6 +13,18 @@ log4js.configure({
   categories: { default: { appenders: Object.keys(appenders), level: 'debug' } }
 })
 
+function line () {
+  console.log()
+}
+
+function section (name, c = '-') {
+  if (!c) {
+    throw new Error('Section needs a name!')
+  }
+
+  console.log(`\n\n${name} ${c.repeat(150 - name.length)}`)
+}
+
 const getLogger = fileName => log4js.getLogger(path.basename(fileName).replace('.js', ''))
 
-module.exports = { getLogger, http }
+module.exports = { getLogger, http, line, section }

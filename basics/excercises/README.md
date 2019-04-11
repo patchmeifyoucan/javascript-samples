@@ -2,17 +2,45 @@ This exercises are based on a simple REST API. The backend uses a static "databa
 should be used to query and process information about customers/users/or whatever business model you want to imagine.
 
 The server code uses inline logic in routes for simplicity reasons. I would not recommend doing this in production
-since this code will not be reusable in any way. Tests can also be seen as possible solution. They are not always implemented in
-the most efficient manner (e.g. map/filter chaining) to keep code understandable for beginners. It is sufficient for these simple base cases. 
+since this code will not be reusable in any way. Tests can also be seen as possible solution to tasks. They are not always implemented in
+the most efficient manner (e.g. map/filter chaining) to keep code understandable for beginners. It is sufficient for these simple base cases 
+since the dataset is very small. 
 
-Not every subtask can be 
-directly solved via coding. Sometimes, you also need to analyze the response dataset to gain more insight. The answer
-should never be found by analyzing the whole dataset. Like you would not analyze a billion records in a database.
+Not every subtask can be directly solved via coding. Sometimes, you also need to analyze the response dataset to gain more insight. 
+The answer should never be found by analyzing the whole dataset. Like you would not analyze a billion records in a database.
+
+Hints provide either helpful methods that were not covered much so far or an explanation how the task could be solved. 
+As always with programming, there is an unlimited set of solutions and you are encouraged to find your own! Most of these
+exercises wont't help you solve real-world problems but they should provide a good start since certain patterns remain
+even in production code.
 
 ## Task 0
 - run `npm i` to install dependencies
 - run `npm start` to start the API server
 - go to http://localhost:3000/api/doc and check out the documentation
+- create a *.js file and import the simplified HTTP client based on [Axios](https://github.com/axios/axios),
+it is already set up with the localhost address so you only have to care about addressing the API
+<details><summary>How do I use the HTTP client provided?</summary>
+<p>
+
+```javascript
+const { http } = require('../util/util') // ensure that your relative path is correct
+
+// note that this execution does not wait for your HTTP call to finish
+// your response will look like [this](https://github.com/axios/axios#response-schema)
+http.get('/api/users')
+    .then(response => {
+      // Do something with the response  
+    })
+    .catch(error => {
+      // Handle the error
+    })
+
+const response = await http.get('/api/users') // if you want to use async-await ensure that you are in an async function    
+```
+
+</p>
+</details>
 - go to Task 1 and try to solve it :)
 - possible solutions are provided in test files, try to avoid cheating as much as possible :) 
 

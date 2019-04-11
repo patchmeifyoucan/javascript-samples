@@ -1,6 +1,8 @@
+###tl;dr I want to [code](excercises)!
+
 # Basics
 
-Basic examples use ES5 syntax. Some helper functions still may use ES6 syntax or even ES6 features. Also, examples are 
+Basic examples use ES5 syntax. The further we move, the more ES6 syntax/features can be encountered. Also, examples are 
 rather erroneous than correct! Do not use any of the code provided for other purposes than teaching, especially not for 
 production code. Samples can be found [here](samples).
 
@@ -29,7 +31,7 @@ console.log(notnull.length) // prints 4, where one would expect 6
 ```
 
 Therefore, understanding truthy and falsy values is important for writing less buggy code. In section 2, we try to
-understand what happens and which benefits/pitfalls arise. 
+understand what happens to certain values when converting them to Booleans and which benefits/pitfalls arise. 
 
 ### [Section 3](samples/section-3)
 Section 3 is short. Before strict mode or ES6 block scoped variables, one had to be very careful with global variables.
@@ -40,14 +42,15 @@ and hoisting are much easier to handle. [4.3.1](samples/section-4/4_13_closures-
 Section 4 covers examples of closures. Since these are examples for beginners, they are not very complex. Only objective
 is to introduce the concept of a closure, with the application of currying. Still, without understanding scope, it can
 be cumbersome to solve even simple problems. Scope is therefore also part of this section since it is closely related
-to closures. 
-Note: Closures are not a specific construct of JavaScript.
+to closures.
+ 
+**Note**: Closures are not a specific construct of JavaScript.
 
 ### [Section 5](samples/section-5)
 Previous sections focused on values. The focus of section 5 is a JavaScript programs's asynchronous execution concept.
 When coming from "classic" OO languages, understanding asynchronous program flows can be especially challenging. 
 Understanding which parts of your (or someone else's) code are running or can be running asynchronously will get you 
-started writing code that actually does what you want it to be doing.
+started with writing code that actually does what you want it to be doing.
  
 We start with understanding callbacks. Even though the whole industry (or at least the modern industry) is moving towards
 [Promises](https://developer.mozilla.org/en-us/docs/Web/JavaScript/Reference/Global_Objects/Promise), callbacks are still

@@ -1,5 +1,5 @@
 var { Context } = require('../../util/context')
-var { section } = require('../../util/misc')
+var { section } = require('../../util/util')
 
 section('Number construction')
 var statements = [
