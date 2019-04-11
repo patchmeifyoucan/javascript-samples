@@ -1,5 +1,5 @@
-var { Context } = require('../util/context')
-var { section } = require('../util/misc')
+var { Context } = require('../../util/context')
+var { section } = require('../../util/misc')
 
 var lorem = 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.'
 var ctx = new Context({ lorem }, { padding: 50 })

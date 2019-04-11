@@ -1,7 +1,7 @@
 // enables "await"
 // ES6 now!
 (async () => {
-  var { section } = require('../util/misc')
+  var { section } = require('../../util/misc')
 
   section('Definition')
   const wait = ms => new Promise(resolve => {

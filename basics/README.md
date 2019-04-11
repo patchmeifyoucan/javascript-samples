@@ -4,12 +4,12 @@ Basic examples use ES5 syntax. Some helper functions still may use ES6 syntax or
 rather erroneous than correct! Do not use any of the code provided for other purposes than teaching, especially not for 
 production code. Samples can be found [here](samples).
 
-### Section 1
+### [Section 1](samples/section-1)
 Section 1 gives an overview about basic types in JavaScript, i.e. `Number`, `String`, `Object` ,`Array` and `Boolean`.
 Simple properties of each types are observed. Different values are instantiated in different ways and compared against
 each other. 
 
-### Section 2
+### [Section 2](samples/section-2)
 JavaScript way of evaluating Boolean expressions might seem quite odd to newcomers. We will not try to find out which
 portions of it are good an which are not. The examples should provide some insight about how booleanification is done.
 In some cases, evaluating ["truthy"](https://developer.mozilla.org/en-US/docs/Glossary/Truthy) and 
@@ -31,19 +31,19 @@ console.log(notnull.length) // prints 4, where one would expect 6
 Therefore, understanding truthy and falsy values is important for writing less buggy code. In section 2, we try to
 understand what happens and which benefits/pitfalls arise. 
 
-### Section 3
+### [Section 3](samples/section-3)
 Section 3 is short. Before strict mode or ES6 block scoped variables, one had to be very careful with global variables.
 This section shows some examples what could have gone wrong back in the days. Nowadays, global scope, function scope 
-and hoisting are much easier to handle. [4.3.1](samples/4.3.1.%20closures-currying.js) introduces one of these bugs.
+and hoisting are much easier to handle. [4.3.1](samples/section-4/4_13_closures-currying.js) introduces one of these bugs.
  
-### Section 4
+### [Section 4](samples/section-4)
 Section 4 covers examples of closures. Since these are examples for beginners, they are not very complex. Only objective
 is to introduce the concept of a closure, with the application of currying. Still, without understanding scope, it can
 be cumbersome to solve even simple problems. Scope is therefore also part of this section since it is closely related
 to closures. 
 Note: Closures are not a specific construct of JavaScript.
 
-### Section 5
+### [Section 5](samples/section-5)
 Previous sections focused on values. The focus of section 5 is a JavaScript programs's asynchronous execution concept.
 When coming from "classic" OO languages, understanding asynchronous program flows can be especially challenging. 
 Understanding which parts of your (or someone else's) code are running or can be running asynchronously will get you 

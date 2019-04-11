@@ -1,4 +1,4 @@
-var { Context } = require('../util/context')
+var { Context } = require('../../util/context')
 var ctx = new Context({}, { padding: 25 })
 
 // Currying - https://developer.mozilla.org/de/docs/Web/JavaScript/Closures

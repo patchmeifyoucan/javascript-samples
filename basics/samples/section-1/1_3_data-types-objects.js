@@ -1,5 +1,5 @@
-var { Context } = require('../util/context')
-var { section } = require('../util/misc')
+var { Context } = require('../../util/context')
+var { section } = require('../../util/misc')
 
 var constructor = new Object(null)
 var literal = {}

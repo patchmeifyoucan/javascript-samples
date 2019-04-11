@@ -1,5 +1,5 @@
 // In which order is i logged?
-var fs = require('../util/fake-fs').fss
+var fs = require('../../util/fake-fs').fss
 
 function read (i) {
   fs.readFile('content', function (err, res) {

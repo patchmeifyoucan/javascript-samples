@@ -1,5 +1,5 @@
-var { Context } = require('../util/context')
-var { section, line } = require('../util/misc')
+var { Context } = require('../../util/context')
+var { section, line } = require('../../util/misc')
 
 var ctx = new Context({}, { padding: 50 })
 
