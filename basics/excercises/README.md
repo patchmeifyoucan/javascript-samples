@@ -1,3 +1,5 @@
+# Exercises
+
 This exercises are based on a simple REST API. The backend uses a static "database" (i.e. a JSON file). The API
 should be used to query and process information about customers/users/or whatever business model you want to imagine.
 

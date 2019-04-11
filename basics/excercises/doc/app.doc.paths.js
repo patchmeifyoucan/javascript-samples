@@ -82,7 +82,7 @@ const spec = {
           }
         },
         400: {
-          description: 'Wrong request format.',
+          description: 'Wrong request format. Every item must have an id.',
           schema: {
             $ref: '#/definitions/errors/clientError'
           }
