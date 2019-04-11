@@ -38,8 +38,9 @@ http.get('/api/users')
       // Handle the error
     })
 
-// if you want to use async-await ensure that you are in an async function, a rejection here will crash your code
-// while the above call does not, why?
+// if you want to use async-await ensure that you are in an async function
+// a rejection here will crash your code while the above call does not
+// how does that relate to the manner in which the code is executed?
 const response = await http.get('/api/users')     
 ```
 
@@ -50,11 +51,13 @@ const response = await http.get('/api/users')
 2. How many active users are in the database?
 
 <details><summary>Hints Task 1</summary>
+<p>
 
 ```javascript
 Array.prototype.filter()      // can be used to find elements matching a condition
 ```
 
+</p>
 </details>
 
 ## Task 2
@@ -63,6 +66,7 @@ Array.prototype.filter()      // can be used to find elements matching a conditi
 3. Who works for the company "GEOFARM"? Use their email address as output.
 
 <details><summary>Hints Task 2</summary>
+<p>
 
 ```javascript
 Date.parse()                  // returns a number
@@ -72,6 +76,8 @@ Math.min()                    // can be used to find the smallest value in a col
 Array.prototype.sort()        // consider using .sort() for sorting numbers
 Date.prototype.toISOString()  // converts a numeric date to a date string
 ```
+
+</p>
 </details>
 
 ## Task 3
@@ -82,8 +88,9 @@ Date.prototype.toISOString()  // converts a numeric date to a date string
 made you forget his name the day after, though. Maybe he did register too?
 
 <details><summary>Hints Task 3</summary>
-<span>The balance is of type `string` in the dataset! Use your knowledge about type conversions to deal with this.</span> 
-
+<p>
+The balance is of type `string` in the dataset! Use your knowledge about type conversions to deal with this.
+ 
 ```javascript
 String.prototype.split()      // just as in any other language
 Array.prototype.pop()         // removes and returns the last element of an array 
@@ -91,7 +98,7 @@ Array.prototype.map()         // transforms a sequence into another sequence
 Array.prototype.sort()        // consider using .sort() for sorting objects
 Array.prototype.slice()       // get a portion of an array
 ```
-
+</p>
 </details>
 
 ## Task 4
@@ -105,8 +112,9 @@ if you want to write some backend code.
 a "company" parameter for analyzing the dataset in such a way? Why, why not? 
 
 <details><summary>Hints Task 4</summary>
+
 <ol>
-    <li>If you have the IDs, try using the `Promise.all()` operation to query all users asynchronously. What are the limitations with this?</li>
+    <li>If you have the IDs, try using the Promise.all() operation to query all users asynchronously. What are the limitations with this?</li>
     <li>Once you get the response, you might see the solution by looking at the data set.</li>
     <li>Try using .map, .filter and .reduce. No more hints. :)</li>
     <li>
@@ -115,6 +123,7 @@ a "company" parameter for analyzing the dataset in such a way? Why, why not?
         Try to decouple the filtering from the property data extraction.
     </li>
 </ol>
+
 </details>
 
 ## Task 5
@@ -126,5 +135,5 @@ a "company" parameter for analyzing the dataset in such a way? Why, why not?
     4. What does your data structure look like?
     
 <details><summary>Hints Task 5</summary>
-
+<p></p>
 </details>    
