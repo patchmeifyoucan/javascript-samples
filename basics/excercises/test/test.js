@@ -2,7 +2,7 @@
 (async () => {
   'use strict'
   const assert = require('assert').strict
-  const { http, getLogger } = require('../util/util')
+  const { http, getLogger } = require('../../util/util')
   const logger = getLogger(__filename)
 
   const { status, /** @type User[] */ data: users } = await http.get('/api/users')

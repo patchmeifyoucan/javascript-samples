@@ -2,7 +2,7 @@
 
 Basic examples use ES5 syntax. Some helper functions still may use ES6 syntax or even ES6 features. Also, examples are 
 rather erroneous than correct! Do not use any of the code provided for other purposes than teaching, especially not for 
-production code.
+production code. Samples can be found [here](samples).
 
 ### Section 1
 Section 1 gives an overview about basic types in JavaScript, i.e. `Number`, `String`, `Object` ,`Array` and `Boolean`.
@@ -12,7 +12,9 @@ each other.
 ### Section 2
 JavaScript way of evaluating Boolean expressions might seem quite odd to newcomers. We will not try to find out which
 portions of it are good an which are not. The examples should provide some insight about how booleanification is done.
-In some cases, evaluating "truthy" and "falsy" values can even capture semantic meaning, e.g.
+In some cases, evaluating ["truthy"](https://developer.mozilla.org/en-US/docs/Glossary/Truthy) and 
+["falsy"](https://developer.mozilla.org/en-US/docs/Glossary/Falsy) values can even capture semantic meaning, e.g.
+
 ```javascript
 function timeout (timeout = 0) {
   if (!timeout) { 
@@ -32,7 +34,7 @@ understand what happens and which benefits/pitfalls arise.
 ### Section 3
 Section 3 is short. Before strict mode or ES6 block scoped variables, one had to be very careful with global variables.
 This section shows some examples what could have gone wrong back in the days. Nowadays, global scope, function scope 
-and hoisting are much easier to handle. [4.3.1](basics/4.3.1.%20closures-currying.js) introduces one of these bugs.
+and hoisting are much easier to handle. [4.3.1](samples/4.3.1.%20closures-currying.js) introduces one of these bugs.
  
 ### Section 4
 Section 4 covers examples of closures. Since these are examples for beginners, they are not very complex. Only objective
@@ -67,9 +69,6 @@ some ES6 features that neatly align with Promises, such as Array
 [destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/destructuring_assignment) and the 
 [`Promise.all()`](https://developer.mozilla.org/en-us/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) operation. 
 
-We also introduce the ES7 async-await pattern.
+We also introduce the ES7 async-await pattern. 
 
-     
-
-
-
+### Happy [coding](excercises)!

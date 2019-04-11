@@ -5,7 +5,7 @@
   const spec = require('../doc/app.doc.swagger.conf.js')
 
   /** @type {Array<User>} */
-  const data = require('../util/data')
+  const data = require('../../util/data')
 
   class ClientError extends Error {
     constructor (error, statusCode = 400) {
