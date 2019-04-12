@@ -6,6 +6,7 @@
   const bodyParser = require('body-parser')
   const swaggerUi = require('swagger-ui-express')
   const spec = require('../doc/app.doc.swagger.conf.js')
+  const { wait } = require('../../util/util')
 
   const defaultFile = path.resolve('../../util/data.json')
   const runtimeFile = path.resolve('../../util/runtime.json')
@@ -62,6 +63,7 @@
 
     user.knows.push(...req.body)
 
+    await wait(3000)
     await fs.outputFile(runtimeFile, JSON.stringify(data, null, 4))
 
     return res.send(user.knows)

@@ -131,10 +131,21 @@ a "company" parameter for analyzing the dataset in such a way? Why, why not?
 </details>
 
 ## Task 5
-Use the http://localhost:3000/api/doc/#/default/post_api_users__userId__meet API to let people meet each other. Try to produce
-every documented client error.  
+Porter Beasley, Allison Duffy and people they know meet for lunch. Find a way to update the database without conflicts.
+Try to optimize the number of requests sent to the server since this operation is <b>VERY SLOW</b>. How fast can you get?
 
+**HINT:**
+```javascript
+console.time("label")
+// Do stuff
+console.timeEnd("label")
+```
+is an easy way to quickly debug time consumption of operations without the need of computing timestamps.
     
 <details><summary>Hints Task 5</summary>
-<p></p>
+<p>
+Both share a subset of known people. Blindly updating the database will fail. Also, trying to add every new person one by one
+will take forever. You can diff both lists using .filter, which will be the fastest solution in this case. The be as fast as
+possible, diffs should be sent using Promise.all().
+</p>
 </details>    

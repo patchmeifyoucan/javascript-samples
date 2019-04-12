@@ -27,6 +27,12 @@
       },
       {
         "id": "43ba9da4-389d-4060-9ddb-cc3c86e86a9f"
+      },
+      {
+        "id": "18bf88cb-6275-428d-ac19-2b168ffb4bad"
+      },
+      {
+        "id": "fa92866b-9d10-42cb-a49c-06ecada43c16"
       }
     ]
   },
@@ -44,6 +50,15 @@
     "email": "allison.duffy@farmage.com",
     "registered": "Wed Oct 10 2018 00:40:45 GMT+0000",
     "knows": [
+      {
+        "id": "ef221b15-59cb-4911-80a0-47104fc40da7"
+      },
+      {
+        "id": "3b04f643-168d-4922-af9e-7b3b4054b9ca"
+      },
+      {
+        "id": "5e355d73-2c12-479f-acf7-22a607789c6f"
+      },
       {
         "id": "9efdd31e-90ee-43a3-95da-ae37d614103e"
       },
