@@ -145,7 +145,7 @@ is an easy way to quickly debug time consumption of operations without the need 
 <details><summary>Hints Task 5</summary>
 <p>
 Both share a subset of known people. Blindly updating the database will fail. Also, trying to add every new person one by one
-will take forever. You can diff both lists using .filter, which will be the fastest solution in this case. The be as fast as
+will take forever. You can diff both lists using .filter, which will be the fastest solution in this case. To be as fast as
 possible, diffs should be sent using Promise.all().
 </p>
 </details>    
