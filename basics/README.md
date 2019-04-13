@@ -33,6 +33,14 @@ console.log(notnull.length) // prints 4, where one would expect 6
 Therefore, understanding truthy and falsy values is important for writing less buggy code. In section 2, we try to
 understand what happens to certain values when converting them to Booleans and which benefits/pitfalls arise. 
 
+If you think that this is due to some strange JavaScript behavior, check out the [Python](https://docs.python.org/3/library/stdtypes.html#truth-value-testing)
+docs on this. The notable difference is that in Python, even empty sequences are evaluated to false whereas in JavaScript,
+empty objects and arrays are truthy values. 
+[Chapter 9 - Type Conversion](https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-262,%201st%20edition,%20June%201997.pdf#page=37)
+of the historical [ECMA-262](https://www.ecma-international.org/publications/standards/Ecma-262.htm) specification from
+1997 has a very detailed explanation on this.
+
+
 ### [Section 3](samples/section-3)
 Section 3 is short. Before strict mode or ES6 block scoped variables, one had to be very careful with global variables.
 This section shows some examples what could have gone wrong back in the days. Nowadays, global scope, function scope 
