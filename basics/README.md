@@ -87,7 +87,7 @@ console.log(obj.myMethod())                     // prints 'value'
 
 ```
  
-**Note**: Closures are not a specific construct of JavaScript. It is rather a [programming concept](https://en.wikipedia.org/wiki/Closure_(computer_programming).
+**Note**: Closures are not a specific construct of JavaScript. It is rather a [programming concept](https://en.wikipedia.org/wiki/Closure_(computer_programming)).
 
 ### [Section 5](samples/section-5)
 Previous sections focused on values. The focus of section 5 is a JavaScript programs's asynchronous execution concept.
