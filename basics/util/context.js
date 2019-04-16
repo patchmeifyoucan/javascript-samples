@@ -58,7 +58,6 @@ Context.prototype.remove = function (value) {
   }
 
   this.sandbox = vm.createContext(clone)
-
 }
 
 Context.prototype.update = function (value) {

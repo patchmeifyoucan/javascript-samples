@@ -9,7 +9,7 @@
 
   const fail = new Promise((resolve, reject) => {
     setTimeout(() => {
-      reject('Not okay')
+      reject(new Error(`I'm an error.`))
     }, Math.random() * 10)
   })
 
